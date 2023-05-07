@@ -1,0 +1,38 @@
+import tkinter as tk
+
+# Define minimum and maximum amount of things hired. 
+MIN_ITEMS_HIRED = 1
+MAX_ITEMS_HIRED = 500
+
+# Create a new instance of tkinter
+root = tk.Tk()
+
+#Title 
+root.title("Julie's Party Hire")
+
+# Label for customers name 
+customer_name_label = tk.Label(root, text="Customer's Name:")
+customer_name_label.pack() 
+
+# entry button for customer's name
+customer_name_entry = tk.Entry(root)
+customer_name_entry.pack()
+
+# Create a label for item hired
+item_hired_label = tk.Label(root, text="Item hired:")
+item_hired_label.pack()
+
+# Entry button for the item hired
+item_hired_entry = tk.Entry(root)
+item_hired_entry.pack()
+
+# Label for the number of items hired
+number_of_items_hired_label = tk.Label(root, text="Number of items hired (1-500):")
+number_of_items_hired_label.pack()
+
+# Create a spinbox button for the number of items hired. 
+number_of_items_hired_spinbox = tk.Spinbox(root, from_=MIN_ITEMS_HIRED, to=MAX_ITEMS_HIRED)
+number_of_items_hired_spinbox.pack()
+
+# Run the main event loop
+root.mainloop()
